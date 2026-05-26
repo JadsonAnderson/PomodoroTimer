@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Container principal que segura todos os elementos da tela. -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://tools.android.com/tools"
@@ -7,6 +8,7 @@
     android:padding="24dp"
     tools:context=".MainActivity">
 
+    <!-- Cabeçalho que exibe o título no topo da tela. -->
     <TextView
         android:id="@+id/tvTitulo"
         android:layout_width="wrap_content"
@@ -20,6 +22,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Bloco do tempo de foco, o 'TextView' serve como rótulo (label) indicando o que digitar,
+    e o 'EditText' é o campo onde o usuário insere os minutos de foco. -->
     <TextView
         android:id="@+id/lblTempoFoco"
         android:layout_width="wrap_content"
@@ -42,6 +46,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/lblTempoFoco" />
 
+    <!-- Bloco de tempo de descanso e meta de pomodoros, capturam respectivamente os minutos de intervalo
+    e a quantidade máxima de ciclos desejados. -->
     <TextView
         android:id="@+id/lblTempoDescanso"
         android:layout_width="wrap_content"
@@ -86,6 +92,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/lblMetaPomodoros" />
 
+    <!-- Botão de ação, é o gatilho que o usuário clica para validar os dados e abrir a tela do cronômetro. -->
     <Button
         android:id="@+id/btnIniciar"
         android:layout_width="0dp"

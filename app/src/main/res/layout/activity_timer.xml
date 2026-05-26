@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Container com trava de tela, envolve todos os elementos visuais do cronômetro. -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,6 +9,7 @@
     android:keepScreenOn="true"
     tools:context=".TimerActivity">
 
+    <!-- Indicador de estado, mostra em qual bloco o usuário está ('Hora de Focar!' ou 'Hora de Descansar!'). -->
     <TextView
         android:id="@+id/tvStatus"
         android:layout_width="wrap_content"
@@ -21,6 +23,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Placar de metas, exibe o progresso dos ciclos estilo '1/5' por exemplo. -->
     <TextView
         android:id="@+id/tvContador"
         android:layout_width="wrap_content"
@@ -33,6 +36,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvStatus" />
 
+    <!-- Grande relógio, exibe a contagem regressiva rodando em tempo real. -->
     <TextView
         android:id="@+id/tvTimer"
         android:layout_width="wrap_content"
@@ -46,6 +50,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvContador" />
 
+    <!-- Botão de cancelamento, interrompe o cronômetro e fecha a tela para voltar ao menu. -->
     <Button
         android:id="@+id/btnVoltar"
         android:layout_width="0dp"
